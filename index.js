@@ -11,6 +11,7 @@ import userRouter from "./routes/v1/user.js";
 import refreshTokenRouter from "./routes/v1/refreshToken.js";
 import roleRouter from "./routes/v1/role.js";
 import userRoleRouter from "./routes/v1/userRole.js";
+import scriptRouter from "./routes/v1/script.js";
 
 const app = express();
 const port = 3000;
@@ -33,6 +34,7 @@ app.use("/api/v1", refreshTokenRouter);
 app.use("/api/v1", userRouter);
 app.use("/api/v1", roleRouter);
 app.use("/api/v1", userRoleRouter);
+app.use("/api/v1", scriptRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
